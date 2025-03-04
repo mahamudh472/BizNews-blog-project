@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from autoslug import AutoSlugField
+from django_ckeditor_5.fields import CKEditor5Field
 
 # Create your models here.
 
@@ -23,7 +24,7 @@ class Blog(models.Model):
     slug = AutoSlugField(populate_from='title')
     upload_date = models.DateField(auto_now_add=True)
     category = models.CharField(max_length=50 ,choices=categories)
-    article = models.TextField(default="")
+    article = CKEditor5Field(config_name='extends')
     likes =  models.IntegerField(default=0)
     comments = models.IntegerField(default=0)
 
