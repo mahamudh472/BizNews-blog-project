@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
-from blogs.models import Blog 
+from blogs.models import Blog, Category
 from django.contrib.auth import authenticate, login, logout
 
-categories = [i[0] for i in Blog.categories]
+categories = [i.name for i in Category.objects.all()]
 def Login(request):
     if request.method == "POST":
         username = request.POST['username']

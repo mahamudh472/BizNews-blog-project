@@ -1,0 +1,46 @@
+[
+    {
+      "title": "Tech Giants Announce Next-Gen AI Models",
+      "category": "Technology",
+      "content": "Leading technology companies have unveiled their latest AI models, promising enhanced capabilities in natural language processing, image recognition, and autonomous systems.",
+      "author": "John Doe",
+      "date": "2025-03-07",
+      "image_url": "media/blogs/news-700x435-5.jpg"
+    },
+    {
+      "title": "Stock Market Sees Record Highs Amid Economic Growth",
+      "category": "Business",
+      "content": "The stock market surged to new highs as economic indicators pointed to sustained growth, with analysts predicting continued investor confidence.",
+      "author": "Jane Smith",
+      "date": "2025-03-07",
+      "image_url": "media/blogs/news-700x435-5.jpg"
+
+    },
+    {
+      "title": "Scientists Discover New Exoplanet with Earth-Like Conditions",
+      "category": "Science",
+      "content": "Astronomers have identified an exoplanet in the habitable zone of a nearby star, raising hopes for potential signs of extraterrestrial life.",
+      "author": "Dr. Emily Carter",
+      "date": "2025-03-07",
+      "image_url": "media/blogs/news-700x435-5.jpg"
+
+    },
+    {
+      "title": "Upcoming Film Breaks Pre-Release Ticket Sales Records",
+      "category": "Entertainment",
+      "content": "An upcoming blockbuster movie has shattered pre-release ticket sales records, with fans eagerly anticipating its premiere.",
+      "author": "Michael Lee",
+      "date": "2025-03-07",
+      "image_url": "media/blogs/news-700x435-5.jpg"
+
+    },
+    {
+      "title": "Football Championship Final: Key Highlights and Analysis",
+      "category": "Sports",
+      "content": "The football championship final concluded with a thrilling match, as analysts break down the key moments and strategies.",
+      "author": "Sarah Johnson",
+      "date": "2025-03-07",
+      "image_url": "media/blogs/news-700x435-5.jpg"
+    }
+  ]
+  
