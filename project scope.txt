@@ -1,0 +1,6 @@
+1. Customize admin panel to create news.
+2. Category wise news filter
+3. Search results.
+4. Single news page with image
+5. Views count
+6. Leave a comment
