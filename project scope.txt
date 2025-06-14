@@ -1,3 +1,6 @@
+- Fix pages issues
+
+
 1. Customize admin panel to create news.
 2. Category wise news filter
 3. Search results.

@@ -34,7 +34,7 @@
                 <nav class="navbar navbar-expand-sm bg-dark p-0">
                     <ul class="navbar-nav ml-n2">
                         <li class="nav-item border-right border-secondary">
-                            <a class="nav-link text-body small" id="date" href="#"></a>
+                            <a class="nav-link text-body small" id="date" href="#">{% now "F j, Y" %}</a>
                         </li>
                         <li class="nav-item border-right border-secondary">
                             <a class="nav-link text-body small" href="#">Advertise</a>
@@ -254,16 +254,7 @@
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
-    <script>
-        var date = new Date()
-        day = date.toLocaleString('default', {weekday: 'long'})
-        month = date.toLocaleString('default', {month: 'long'})
-        date_ = date.getDate()
-        year = date.getFullYear()
-        window.addEventListener('load', ()=>{
-            document.getElementById('date').innerText = ` ${day}, ${month}${date_}, ${year} `
-        })
-    </script>
+
 </body>
 
 </html>
