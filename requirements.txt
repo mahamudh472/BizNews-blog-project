@@ -4,6 +4,7 @@ django-autoslug==1.9.9
 django-ckeditor==6.7.1
 django-ckeditor-5==0.2.18
 django-js-asset==2.2.0
+Faker==37.4.0
 gunicorn==22.0.0
 packaging==24.1
 pillow==11.2.1

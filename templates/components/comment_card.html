@@ -1,0 +1,14 @@
+{% load static %}
+<div class="media mb-4">
+  <img src="{% static 'img/default_user.jpg' %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;" />
+  <div class="media-body">
+    <h6><a class="text-secondary font-weight-bold" href="">{% if comment.user %}{{ comment.user.username }}{% else %}{{comment.name}}{% endif %}</a> <small><i>{{ comment.created_at|date:"d M Y" }}</i></small></h6>
+    <p>{{ comment.comment }}</p>
+    <button class="btn btn-sm btn-outline-secondary">Reply</button>
+    {% if comment.get_replies %}
+        {% for reply in comment.get_replies %}
+            {% include "components/comment_card.html" with comment=reply %}
+        {% endfor %}
+    {% endif %}
+  </div>
+</div>
