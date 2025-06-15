@@ -138,3 +138,9 @@ def blog(request, slug):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def single_news(request):
+    blog_object = Blog.objects.order_by('?').first()
+    if not blog_object:
+        return redirect('index')  # Redirect to index if no blogs are available
+    return redirect('blog', slug=blog_object.slug)  # Redirect to the single blog page

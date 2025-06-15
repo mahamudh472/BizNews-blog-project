@@ -105,9 +105,9 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="/" class="nav-item nav-link">Home</a>
                     <a href="category" class="nav-item nav-link">Category</a>
-                    <a href="blog" class="nav-item nav-link">Single News</a>
+                    <a href="/single_news" class="nav-item nav-link">Single News</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                         <div class="dropdown-menu rounded-0 m-0">
@@ -184,7 +184,7 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="mb-4 text-white text-uppercase font-weight-bold">Categories</h5>
                 <div class="m-n1">
-                    {% for cat in categories %}
+                    {% for cat in categories_list %}
                     <a href="{% url "category_blogs" cat %}" class="btn btn-sm btn-secondary m-1">{{ cat }}({{cat.get_blogs_count}})</a>
                     {% endfor %}
                 </div>
@@ -236,6 +236,27 @@
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        // Highlight active nav-link
+        $(function() {
+            var path = window.location.pathname.replace(/\/$/, "");
+            $('.navbar-nav .nav-link').each(function() {
+                var href = $(this).attr('href');
+                if (href && href !== "#") {
+                    // Special case for home link
+                    if ((href === "/" && path === "") || path === href) {
+                        $(this).addClass('active');
+                    } else {
+                        // Ensure href starts with a slash for comparison
+                        var hrefPath = href.startsWith('/') ? href : '/' + href;
+                        if (path === hrefPath || path.startsWith(hrefPath + '/')) {
+                            $(this).addClass('active');
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 
 </body>
 

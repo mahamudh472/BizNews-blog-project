@@ -27,6 +27,7 @@ urlpatterns = [
     path('category', views.category, name="category"),
     path('category/<str:category>', views.category_blogs, name="category_blogs"),
     path('blog/<slug>', views.blog, name="blog"),
+    path('single_news', views.single_news, name="single_news"),
     path('contact', views.contact, name="contact"),
     path('login', views.Login, name="login"),
     path('logout', views.Logout, name="logout"),
